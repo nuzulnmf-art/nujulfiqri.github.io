@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nujul Nur Manajil Fiqri — Logistics & Supply Chain Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  /* ── Reset & Base ─────────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:    #0D1F35;
+    --navy2:   #152C47;
+    --navy3:   #1E3A56;
+    --gold:    #C9A84C;
+    --gold2:   #E8C97A;
+    --teal:    #1E8C7A;
+    --teal2:   #25B39C;
+    --slate:   #3A5F7D;
+    --light:   #F4F0E8;
+    --cream:   #FAF8F4;
+    --white:   #FFFFFF;
+    --text:    #1A2B3C;
+    --muted:   #6B8099;
+    --border:  rgba(201,168,76,0.25);
+    --card:    rgba(255,255,255,0.04);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--gold); color: var(--navy); }
+
+  /* ── Scrollbar ────────────────────────────────────────────────────────── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--navy); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+  /* ── Nav ──────────────────────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 0 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+    background: rgba(13,31,53,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px; letter-spacing: 3px; color: var(--gold);
+  }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-size: 13px; font-weight: 500; letter-spacing: 1.5px;
+    text-decoration: none; color: rgba(255,255,255,0.7);
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── Hero ─────────────────────────────────────────────────────────────── */
+  #hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    padding: 0 48px;
+  }
+  /* Geometric background pattern */
+  #hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  /* Radial glow */
+  #hero::after {
+    content: '';
+    position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+    width: 900px; height: 900px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 2; text-align: center;
+    max-width: 900px;
+  }
+  .hero-eyebrow {
+    font-size: 12px; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 28px;
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; flex: 1; max-width: 60px; height: 1px; background: var(--gold); opacity: 0.5;
+  }
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(56px, 8vw, 100px);
+    font-weight: 300; line-height: 1;
+    color: var(--white); letter-spacing: -2px;
+    opacity: 0; animation: fadeUp 0.9s 0.4s forwards;
+  }
+  .hero-name span { color: var(--gold); font-style: italic; }
+  .hero-title {
+    margin-top: 20px;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 300; letter-spacing: 2px;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    opacity: 0; animation: fadeUp 0.9s 0.6s forwards;
+  }
+  .hero-divider {
+    width: 1px; height: 80px; background: linear-gradient(to bottom, var(--gold), transparent);
+    margin: 40px auto;
+    opacity: 0; animation: fadeUp 0.9s 0.8s forwards;
+  }
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 300; font-style: italic;
+    color: rgba(255,255,255,0.75); max-width: 680px; margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0; animation: fadeUp 0.9s 1s forwards;
+  }
+  .hero-cta {
+    margin-top: 48px; display: flex; gap: 16px; justify-content: center;
+    opacity: 0; animation: fadeUp 0.9s 1.2s forwards;
+  }
+  .btn-primary {
+    padding: 14px 36px;
+    background: var(--gold); color: var(--navy);
+    font-size: 13px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; text-decoration: none; border: none; cursor: pointer;
+    transition: all 0.3s; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); }
+  .btn-outline {
+    padding: 14px 36px;
+    background: transparent; color: rgba(255,255,255,0.8);
+    font-size: 13px; font-weight: 500; letter-spacing: 2px;
+    text-transform: uppercase; text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: all 0.3s; display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .scroll-hint {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.3); font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0; animation: fadeUp 1s 1.6s forwards;
+  }
+  .scroll-arrow {
+    width: 20px; height: 20px;
+    border-right: 1px solid rgba(201,168,76,0.5);
+    border-bottom: 1px solid rgba(201,168,76,0.5);
+    transform: rotate(45deg);
+    animation: bounce 2s infinite;
+  }
+
+  /* ── Stats strip ──────────────────────────────────────────────────────── */
+  #stats {
+    background: var(--navy2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 56px 48px;
+  }
+  .stats-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .stat-item {
+    text-align: center;
+    padding: 24px 32px;
+    border-right: 1px solid var(--border);
+    opacity: 0; transform: translateY(20px);
+    transition: all 0.6s;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-item.visible { opacity: 1; transform: none; }
+  .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px; line-height: 1;
+    color: var(--gold); letter-spacing: 2px;
+  }
+  .stat-suffix { font-size: 32px; color: var(--gold2); }
+  .stat-label {
+    margin-top: 8px;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .stat-sub {
+    margin-top: 4px; font-size: 11px; color: rgba(255,255,255,0.3);
+    font-style: italic;
+  }
+
+  /* ── Section common ───────────────────────────────────────────────────── */
+  section { padding: 100px 48px; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 11px; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 12px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::after { content: ''; flex: 0 0 40px; height: 1px; background: var(--gold); opacity: 0.5; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 300; line-height: 1.1;
+    color: var(--navy); margin-bottom: 56px;
+  }
+  .section-title em { font-style: italic; color: var(--slate); }
+
+  /* ── About ────────────────────────────────────────────────────────────── */
+  #about { background: var(--cream); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start;
+  }
+  .about-left { position: relative; }
+  .about-photo-frame {
+    width: 100%; aspect-ratio: 3/4; max-width: 320px;
+    background: linear-gradient(135deg, var(--navy2) 0%, var(--navy3) 100%);
+    position: relative; overflow: hidden;
+  }
+  .about-photo-frame::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .photo-placeholder {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 12px;
+  }
+  .photo-icon {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: rgba(201,168,76,0.15);
+    border: 2px solid rgba(201,168,76,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px;
+  }
+  .photo-hint { font-size: 11px; letter-spacing: 2px; color: rgba(255,255,255,0.3); text-align: center; }
+  .photo-frame-border {
+    position: absolute; top: 16px; right: -16px; bottom: -16px; left: 16px;
+    border: 1px solid var(--border);
+    z-index: -1;
+  }
+  .about-badges {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
+  }
+  .badge {
+    padding: 6px 14px; font-size: 11px; letter-spacing: 1px;
+    background: var(--navy); color: var(--gold);
+    font-weight: 500; text-transform: uppercase;
+  }
+  .about-text p {
+    font-size: 16px; line-height: 1.85; color: #3A4B5C;
+    margin-bottom: 20px;
+  }
+  .about-text p:first-child {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 400; color: var(--navy);
+    line-height: 1.6; margin-bottom: 28px;
+  }
+  .about-details {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px;
+    padding-top: 32px; border-top: 1px solid rgba(0,0,0,0.08);
+  }
+  .detail-item { display: flex; flex-direction: column; gap: 4px; }
+  .detail-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+  .detail-value { font-size: 14px; font-weight: 500; color: var(--navy); }
+
+  /* ── Experience ───────────────────────────────────────────────────────── */
+  #experience { background: var(--navy); }
+  #experience .section-title { color: var(--white); }
+  #experience .section-title em { color: var(--gold2); }
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 1px; background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,0.1));
+  }
+  .tl-item {
+    padding-left: 52px; margin-bottom: 72px; position: relative;
+    opacity: 0; transform: translateX(-20px);
+    transition: all 0.7s;
+  }
+  .tl-item.visible { opacity: 1; transform: none; }
+  .tl-dot {
+    position: absolute; left: -6px; top: 6px;
+    width: 13px; height: 13px; border-radius: 50%;
+    background: var(--gold); border: 2px solid var(--navy);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+  }
+  .tl-header { margin-bottom: 20px; }
+  .tl-company {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px; font-weight: 600;
+    color: var(--white); line-height: 1.2;
+  }
+  .tl-company span {
+    font-size: 13px; font-weight: 400; font-style: italic;
+    color: var(--gold2); margin-left: 12px; font-family: 'DM Sans', sans-serif;
+  }
+  .tl-meta {
+    display: flex; gap: 24px; margin-top: 6px;
+    font-size: 13px; color: var(--muted);
+  }
+  .tl-role { color: var(--teal2); font-weight: 500; }
+  .tl-date { color: rgba(255,255,255,0.4); }
+  .tl-location::before { content: '📍'; margin-right: 4px; font-size: 11px; }
+  .tl-body {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+  .tl-col { }
+  .tl-col-header {
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    padding: 6px 12px; margin-bottom: 14px; display: inline-block;
+  }
+  .tl-col-header.resp {
+    background: rgba(58,95,125,0.3); color: var(--teal2);
+    border-left: 2px solid var(--teal2);
+  }
+  .tl-col-header.achv {
+    background: rgba(201,168,76,0.1); color: var(--gold);
+    border-left: 2px solid var(--gold);
+  }
+  .tl-list { list-style: none; }
+  .tl-list li {
+    font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.65);
+    padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex; gap: 10px;
+  }
+  .tl-list li::before { content: '—'; color: var(--gold); opacity: 0.5; flex-shrink: 0; margin-top: 1px; }
+  .achv-list li { color: rgba(255,255,255,0.75); }
+  .achv-list li::before { content: '★'; color: var(--gold); opacity: 0.8; font-size: 10px; margin-top: 3px; }
+
+  /* ── Competencies ─────────────────────────────────────────────────────── */
+  #competencies { background: var(--cream); }
+  .comp-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  }
+  .comp-card {
+    background: var(--white);
+    padding: 36px 32px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    opacity: 0; transform: translateY(16px);
+    transition: opacity 0.5s, transform 0.5s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .comp-card.visible { opacity: 1; transform: none; }
+  .comp-card:hover { border-bottom-color: var(--gold); box-shadow: 0 8px 40px rgba(0,0,0,0.08); }
+  .comp-icon {
+    font-size: 32px; margin-bottom: 16px; display: block;
+  }
+  .comp-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 600; color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .comp-desc { font-size: 13px; line-height: 1.7; color: var(--muted); }
+
+  /* ── Skills ───────────────────────────────────────────────────────────── */
+  #skills { background: var(--navy2); }
+  #skills .section-title { color: var(--white); }
+  #skills .section-title em { color: var(--gold2); }
+  .skills-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  }
+  .skill-group-title {
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 24px;
+    padding-bottom: 12px; border-bottom: 1px solid var(--border);
+  }
+  .skill-tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+  .skill-tag {
+    padding: 8px 16px; font-size: 13px;
+    background: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.2s;
+  }
+  .skill-tag:hover { background: rgba(201,168,76,0.15); border-color: var(--gold); color: var(--gold2); }
+  .skill-tag.highlight {
+    background: rgba(201,168,76,0.12);
+    border-color: rgba(201,168,76,0.4);
+    color: var(--gold2);
+  }
+  .lang-item { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+  .lang-name { font-size: 14px; color: var(--white); min-width: 80px; }
+  .lang-bar { flex: 1; height: 4px; background: rgba(255,255,255,0.1); }
+  .lang-fill { height: 100%; background: linear-gradient(to right, var(--gold), var(--teal2)); }
+  .lang-level { font-size: 12px; color: var(--muted); min-width: 80px; text-align: right; }
+
+  /* ── Certifications ───────────────────────────────────────────────────── */
+  #certifications { background: var(--cream); }
+  .cert-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  .cert-card {
+    background: var(--white);
+    padding: 28px 24px;
+    border-top: 2px solid var(--gold);
+    transition: all 0.3s;
+    opacity: 0; transform: translateY(16px);
+    transition: opacity 0.5s, transform 0.5s, box-shadow 0.3s;
+  }
+  .cert-card.visible { opacity: 1; transform: none; }
+  .cert-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+  .cert-icon { font-size: 28px; margin-bottom: 14px; }
+  .cert-name {
+    font-size: 15px; font-weight: 600; color: var(--navy);
+    line-height: 1.4; margin-bottom: 8px;
+  }
+  .cert-org { font-size: 12px; color: var(--muted); letter-spacing: 0.5px; }
+
+  /* ── Contact ──────────────────────────────────────────────────────────── */
+  #contact {
+    background: var(--navy);
+    text-align: center;
+  }
+  #contact .section-title { color: var(--white); margin-bottom: 20px; }
+  .contact-subtitle {
+    font-size: 16px; color: rgba(255,255,255,0.5);
+    margin-bottom: 56px; max-width: 480px; margin-left: auto; margin-right: auto;
+    margin-bottom: 56px;
+  }
+  .contact-links {
+    display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+  }
+  .contact-link {
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 28px;
+    border: 1px solid var(--border);
+    color: rgba(255,255,255,0.75);
+    text-decoration: none; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .contact-link:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.05); }
+  .contact-link-icon { font-size: 18px; }
+  .contact-divider {
+    width: 1px; height: 60px; background: var(--border);
+    margin: 64px auto 0;
+  }
+  .footer-note {
+    margin-top: 32px; padding-top: 32px;
+    font-size: 12px; color: rgba(255,255,255,0.2); letter-spacing: 1px;
+  }
+
+  /* ── Animations ───────────────────────────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: rotate(45deg) translateY(0); }
+    50%       { transform: rotate(45deg) translateY(6px); }
+  }
+
+  /* ── Reveal helper ────────────────────────────────────────────────────── */
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s, transform 0.7s;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ── Mobile ───────────────────────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    section { padding: 72px 24px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .tl-body { grid-template-columns: 1fr; }
+    .comp-grid { grid-template-columns: 1fr 1fr; }
+    .cert-grid { grid-template-columns: 1fr 1fr; }
+    .skills-layout { grid-template-columns: 1fr; gap: 40px; }
+    .hero-cta { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ NAV ══════════════ -->
+<nav>
+  <div class="nav-logo">NNMF</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#competencies">Expertise</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Supply Chain & Logistics Leader</div>
+    <h1 class="hero-name">
+      Nujul <span>Nur</span><br>Manajil Fiqri
+    </h1>
+    <p class="hero-title">Logistics Manager · Diageo Indonesia · APAC COE</p>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">
+      Building world-class logistics operations across FMCG, retail and multinational environments — from warehouse inception to APAC strategic alignment.
+    </p>
+    <div class="hero-cta">
+      <a href="#experience" class="btn-primary">View Experience</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ STATS ═════════════ -->
+<div id="stats">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="10">0</span><span class="stat-suffix">+</span></div>
+      <div class="stat-label">Years Experience</div>
+      <div class="stat-sub">Across FMCG, Retail & Multinational</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="5">0</span></div>
+      <div class="stat-label">Depots Established</div>
+      <div class="stat-sub">Semarang, Palembang, Bekasi, Surabaya, Pekanbaru</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="235">0</span><span class="stat-suffix">+</span></div>
+      <div class="stat-label">SKUs Managed</div>
+      <div class="stat-sub">450K carton warehouse capacity</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="7">0</span></div>
+      <div class="stat-label">Companies Across Career</div>
+      <div class="stat-sub">Including Diageo, Asian Paints, Alibaba Group</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ ABOUT ════════════ -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <div class="about-photo-frame">
+          <div class="photo-placeholder">
+            <div class="photo-icon">👤</div>
+            <div class="photo-hint">Replace with your<br>professional photo</div>
+          </div>
+        </div>
+        <div class="photo-frame-border"></div>
+        <div class="about-badges" style="margin-top:32px;">
+          <span class="badge">FMCG</span>
+          <span class="badge">Multinational</span>
+          <span class="badge">SAP MM/SD</span>
+          <span class="badge">APAC COE</span>
+          <span class="badge">Lean Six Sigma</span>
+        </div>
+      </div>
+      <div class="about-text reveal" style="transition-delay:0.15s">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">A decade of <em>building</em> what moves business forward</h2>
+        <p>
+          With over 10 years of progressive experience across FMCG, retail, and multinational environments, I have built my career on a simple conviction: that great logistics is what separates companies that scale from companies that stall.
+        </p>
+        <p>
+          From my early days as a logistics admin at PT Kaldu Sari Nabati — managing 70,000 cartons of outbound shipments daily — to my current role as Logistics Manager at Diageo's LKJ Bali Plant within the APAC Planning & Logistics Centre of Excellence, I have always led from the ground up.
+        </p>
+        <p>
+          I specialize in end-to-end operations: warehouse setup and establishment, transportation network design, inventory management, customer financial performance, and cross-functional stakeholder alignment across multicultural APAC teams.
+        </p>
+        <div class="about-details">
+          <div class="detail-item">
+            <span class="detail-label">Current Role</span>
+            <span class="detail-value">Logistics Manager</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Company</span>
+            <span class="detail-value">Diageo Indonesia</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">Bali / Jakarta, Indonesia</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Education</span>
+            <span class="detail-value">S1 Business Mgmt, Widyatama</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Email</span>
+            <span class="detail-value">nuzul_nur@outlook.com</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">LinkedIn</span>
+            <span class="detail-value">linkedin.com/in/nujul</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ EXPERIENCE ════════ -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--gold)">Career Timeline</div>
+    <h2 class="section-title">Professional <em>Experience</em></h2>
+
+    <div class="timeline">
+
+      <!-- Diageo -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">Diageo Indonesia <span>FMCG · Global Spirits</span></div>
+          <div class="tl-meta">
+            <span class="tl-role">Logistics Manager – LKJ Bali Plant</span>
+            <span class="tl-date">May 2025 – Present</span>
+            <span class="tl-location">Bali, Indonesia</span>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-col">
+            <span class="tl-col-header resp">Key Responsibilities</span>
+            <ul class="tl-list">
+              <li>Oversee end-to-end logistics for LKJ Bali Plant as member of Plant Leadership Team and APAC Planning & Logistics COE.</li>
+              <li>Direct strategic logistics plans aligned with APAC regional objectives across RMPM and FG warehouses.</li>
+              <li>Manage full financial scope — OPEX & CAPEX proposal, control, and delivery in collaboration with Finance.</li>
+              <li>Champion Diageo global standards for warehousing, transportation, and HS&E compliance; ensure full COBC alignment.</li>
+              <li>Lead, mentor and develop 7 FTEs + 12 third-party employees across RMPM and FG warehouses.</li>
+              <li>Cultivate collaborative relationships with multicultural APAC stakeholders across Finance, Production, and cross-functional departments.</li>
+            </ul>
+          </div>
+          <div class="tl-col">
+            <span class="tl-col-header achv">Key Milestones & Achievements</span>
+            <ul class="tl-list achv-list">
+              <li>Integrated into Diageo's APAC Planning & Logistics COE, contributing to regional standards alignment within first quarter.</li>
+              <li>Established structured team development framework for warehouse personnel, fostering a culture of accountability and continuous learning.</li>
+              <li>Initiated financial analysis cadence delivering actionable cost-efficiency insights to senior management.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Asian Paints – Customer Mgmt -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">Asian Paints Indonesia <span>FMCG · Paints & Coatings</span></div>
+          <div class="tl-meta">
+            <span class="tl-role">Logistics Asst. Manager – Customer Management</span>
+            <span class="tl-date">Nov 2022 – May 2025</span>
+            <span class="tl-location">Jakarta, Indonesia</span>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-col">
+            <span class="tl-col-header resp">Key Responsibilities</span>
+            <ul class="tl-list">
+              <li>Managed nationwide customer logistics (GT, MTO & Distributor) covering end-to-end logistical needs and customer financial processes.</li>
+              <li>Directed payment tracking, overdue account management, and monthly financial reconciliation.</li>
+              <li>Led reverse logistics execution using SAP SD module with zero-error commitment.</li>
+              <li>Orchestrated monthly logistics and customer financial closing in SAP, coordinating across 8+ functions including Sales, Finance, QA, IT.</li>
+            </ul>
+          </div>
+          <div class="tl-col">
+            <span class="tl-col-header achv">Key Milestones & Achievements</span>
+            <ul class="tl-list achv-list">
+              <li>Maintained Overdue vs. AR ratio consistently below 15% throughout tenure.</li>
+              <li>Sustained monthly collection target ratio at 95% and Collection Effectiveness Index (CEI) at 90%.</li>
+              <li>Achieved 100% financial balance accuracy across all accounts via systematic reconciliation.</li>
+              <li>Built zero-defect reverse logistics process — zero error rate across all customer return transactions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Asian Paints – Project Mgmt -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">Asian Paints Indonesia <span>FMCG · Paints & Coatings</span></div>
+          <div class="tl-meta">
+            <span class="tl-role">Logistics Asst. Manager – Project Management</span>
+            <span class="tl-date">Jul 2021 – Apr 2023</span>
+            <span class="tl-location">Jakarta, Indonesia</span>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-col">
+            <span class="tl-col-header resp">Key Responsibilities</span>
+            <ul class="tl-list">
+              <li>Oversaw warehouse and distribution network expansion across Indonesia — site selection, legal documentation, SOP creation through stabilization.</li>
+              <li>Developed end-to-end logistics and warehouse SOPs; set up complete processes and infrastructure at each new DC.</li>
+              <li>Prepared and managed annual OPEX/CAPEX budgets; controlled freight spend through route optimization.</li>
+              <li>Evaluated and finalized vendors; led effective negotiations with all warehouse setup and operations stakeholders.</li>
+            </ul>
+          </div>
+          <div class="tl-col">
+            <span class="tl-col-header achv">Key Milestones & Achievements</span>
+            <ul class="tl-list achv-list">
+              <li>Successfully established 5 new distribution centers: Semarang, Palembang, Bekasi, Surabaya, and Pekanbaru — all on time and within budget.</li>
+              <li>Drove logistics process automation and SOP standardization, significantly reducing operational onboarding time at new sites.</li>
+              <li>Implemented end-to-end logistics automation improving operational consistency across the distribution network.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bluemart – Specialist -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">Bluemart Technology Ltd <span>Alibaba Group · Retail Tech</span></div>
+          <div class="tl-meta">
+            <span class="tl-role">Logistics Project Specialist</span>
+            <span class="tl-date">Sep 2020 – Jul 2021</span>
+            <span class="tl-location">Jakarta, Indonesia</span>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-col">
+            <span class="tl-col-header resp">Key Responsibilities</span>
+            <ul class="tl-list">
+              <li>Drove project execution from initial stage to finalization aligned with the company's operational strategy, reporting to Head of Logistics.</li>
+              <li>Managed multi-level stakeholder relationships from ground operations to top management across different functions.</li>
+              <li>Supported warehouse efficiency initiatives across inbound, inventory, and outbound; managed logistics asset and cost programs.</li>
+            </ul>
+          </div>
+          <div class="tl-col">
+            <span class="tl-col-header achv">Key Milestones & Achievements</span>
+            <ul class="tl-list achv-list">
+              <li>Led successful end-to-end WMS implementation (FLUX WMS) across distribution operations.</li>
+              <li>Established multiple sub-warehouse operations in various cities from initial setup through smooth operational handover.</li>
+              <li>Delivered cross-docking distribution setup and logistics cost efficiency program contributing to measurable last-mile cost reduction.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bluemart – DC Manager -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">Bluemart Technology Ltd <span>Alibaba Group · Smart Vending</span></div>
+          <div class="tl-meta">
+            <span class="tl-role">Distribution Center Manager</span>
+            <span class="tl-date">Apr 2020 – Sep 2020</span>
+            <span class="tl-location">Jakarta, Indonesia</span>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-col">
+            <span class="tl-col-header resp">Key Responsibilities</span>
+            <ul class="tl-list">
+              <li>Managed day-to-day warehouse and fleet operations — inbound, outbound, picking, inventory control, and daily forecasting.</li>
+              <li>Led 4 direct and 50 indirect subordinates; coached, counseled, and appraised team performance to achieve all KPIs.</li>
+              <li>Planned, developed, and designed warehouse and fleet operational strategies to meet evolving business needs.</li>
+            </ul>
+          </div>
+          <div class="tl-col">
+            <span class="tl-col-header achv">Key Milestones & Achievements</span>
+            <ul class="tl-list achv-list">
+              <li>Maintained consistent fulfillment ratio and on-time delivery across all distribution routes during operational ramp-up phase.</li>
+              <li>Optimized route planning across coverage area, improving fleet utilization and reducing delivery turnaround time.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- PT Solusi -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">PT Solusi Teknologi Logistik <span>Logistics Tech</span></div>
+          <div class="tl-meta">
+            <span class="tl-role">Head of Operations</span>
+            <span class="tl-date">Jul 2019 – Oct 2019</span>
+            <span class="tl-location">West Jakarta, Indonesia</span>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-col">
+            <span class="tl-col-header resp">Key Responsibilities</span>
+            <ul class="tl-list">
+              <li>Reported directly to CEO; accountable for all operational KPIs including on-time delivery, CSL, inventory accuracy, and productivity.</li>
+              <li>Managed workforce planning, quality control, and safety; directed operations team to achieve business targets.</li>
+              <li>Built strong customer relationships by handling problems and complaints in a timely, professional manner.</li>
+            </ul>
+          </div>
+          <div class="tl-col">
+            <span class="tl-col-header achv">Key Milestones & Achievements</span>
+            <ul class="tl-list achv-list">
+              <li>Delivered consistent performance against all OKRs including on-time delivery and customer service levels.</li>
+              <li>Implemented structured documentation and procedure controls that improved dispatch accuracy and compliance.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kaldu Sari Nabati – Supervisor -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">PT Kaldu Sari Nabati Indonesia <span>FMCG · Richeese / Richoco</span></div>
+          <div class="tl-meta">
+            <span class="tl-role">Logistics DC Supervisor → Admin Outbound/Inbound Staff</span>
+            <span class="tl-date">Dec 2014 – Jun 2019</span>
+            <span class="tl-location">Bandung, West Java, Indonesia</span>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-col">
+            <span class="tl-col-header resp">Key Responsibilities</span>
+            <ul class="tl-list">
+              <li>Managed large-scale DC: ~235 SKUs, 450K-carton storage, 6,000+ pallet positions — avg. 100K CTN inbound and 70K CTN outbound daily.</li>
+              <li>Maintained FEFO/FIFO discipline and inventory accuracy through shift cycle counts and SAP R/3 MM reconciliation.</li>
+              <li>Supervised team of warehouse staff; coordinated and monitored all inbound/outbound operational and administrative activities.</li>
+              <li>Tracked all KPIs: Inventory Records Accuracy, DIFOT, CSL, Traceability, Picking Accuracy, and Order Cycle Time.</li>
+            </ul>
+          </div>
+          <div class="tl-col">
+            <span class="tl-col-header achv">Key Milestones & Achievements</span>
+            <ul class="tl-list achv-list">
+              <li>Sustained 100% inventory accuracy throughout tenure via rigorous cycle count and reconciliation discipline.</li>
+              <li>Achieved outbound productivity target of 286 CTN/person/shift and 720 CTN/person/shift for inbound.</li>
+              <li>Delivered Customer Service Level (CSL) at 100% target attainment consistently across entire reporting period.</li>
+              <li>Developed shift reporting templates adopted as the standard format for the team — improving reporting speed and accuracy.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /timeline -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ COMPETENCIES ══════ -->
+<section id="competencies">
+  <div class="section-inner">
+    <div class="section-label">Areas of Expertise</div>
+    <h2 class="section-title">Core <em>Competencies</em></h2>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <span class="comp-icon">🏭</span>
+        <div class="comp-title">End-to-End Logistics Operations</div>
+        <div class="comp-desc">Full-cycle management from inbound receiving and warehouse operations to outbound distribution, fleet management, and last-mile delivery performance.</div>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">🏗️</span>
+        <div class="comp-title">Warehouse Setup & Establishment</div>
+        <div class="comp-desc">Proven track record of setting up distribution centers from scratch — site selection, legal documentation, infrastructure, SOP creation, and operational stabilization.</div>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">🚚</span>
+        <div class="comp-title">Transportation & Distribution</div>
+        <div class="comp-desc">Route optimization, fleet utilization management, carrier performance monitoring, and DIFOT achievement across complex nationwide distribution networks.</div>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">📦</span>
+        <div class="comp-title">Inventory & SAP Management</div>
+        <div class="comp-desc">Expert-level SAP R/3 (MM & SD modules) utilization for inventory control, FEFO/FIFO management, stock reconciliation, and cycle count management.</div>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">💰</span>
+        <div class="comp-title">Financial & Budget Management</div>
+        <div class="comp-desc">OPEX/CAPEX planning and control, customer AR and CEI management, financial reconciliation, and logistics cost optimization across multi-site operations.</div>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">🤝</span>
+        <div class="comp-title">Customer Logistics Management</div>
+        <div class="comp-desc">Managing end-to-end customer logistical needs for GT, MTO & Distributor channels — with a focus on financial performance, reverse logistics, and service excellence.</div>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">👥</span>
+        <div class="comp-title">Team Leadership & Development</div>
+        <div class="comp-desc">Building and mentoring high-performing multicultural logistics teams — from warehouse staff to senior operations managers — across FTE and third-party models.</div>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">🔄</span>
+        <div class="comp-title">Lean & Continuous Improvement</div>
+        <div class="comp-desc">Lean Six Sigma-grounded approach to process improvement, SOP standardization, 5S implementation, automation initiatives, and KPI-driven operational excellence.</div>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">🌏</span>
+        <div class="comp-title">Cross-Functional Stakeholder Management</div>
+        <div class="comp-desc">Skilled at driving alignment across Sales, Finance, Manufacturing, IT, QA, Marketing, and APAC regional teams in complex multinational matrix environments.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ SKILLS ════════════ -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--gold)">Tools & Technologies</div>
+    <h2 class="section-title">Technical <em>Skills</em></h2>
+    <div class="skills-layout">
+      <div>
+        <div class="skill-group-title">ERP & Systems</div>
+        <div class="skill-tag-cloud">
+          <span class="skill-tag highlight">SAP R/3 MM Module</span>
+          <span class="skill-tag highlight">SAP SD Module</span>
+          <span class="skill-tag highlight">SAP IM Module</span>
+          <span class="skill-tag highlight">FLUX WMS</span>
+          <span class="skill-tag">Inventory Management Systems</span>
+          <span class="skill-tag">Order Management Systems</span>
+        </div>
+        <div class="skill-group-title">Analytics & Reporting</div>
+        <div class="skill-tag-cloud">
+          <span class="skill-tag highlight">Power BI</span>
+          <span class="skill-tag highlight">Microsoft Excel (Advanced)</span>
+          <span class="skill-tag">Power Query</span>
+          <span class="skill-tag">Power Automate</span>
+          <span class="skill-tag">SharePoint</span>
+          <span class="skill-tag">Microsoft 365</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Methodologies & Frameworks</div>
+        <div class="skill-tag-cloud">
+          <span class="skill-tag highlight">Lean Six Sigma</span>
+          <span class="skill-tag highlight">FEFO / FIFO</span>
+          <span class="skill-tag highlight">5S / 5R</span>
+          <span class="skill-tag">KPI Management</span>
+          <span class="skill-tag">DIFOT</span>
+          <span class="skill-tag">Cycle Counting</span>
+          <span class="skill-tag">Cross-Docking</span>
+          <span class="skill-tag">Route Optimization</span>
+          <span class="skill-tag">SOP Development</span>
+          <span class="skill-tag">Reverse Logistics</span>
+        </div>
+        <div class="skill-group-title">Languages</div>
+        <div class="lang-item">
+          <span class="lang-name">Indonesian</span>
+          <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+          <span class="lang-level">Native</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">English</span>
+          <div class="lang-bar"><div class="lang-fill" style="width:78%"></div></div>
+          <span class="lang-level">Professional</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ CERTIFICATIONS ════ -->
+<section id="certifications">
+  <div class="section-inner">
+    <div class="section-label">Professional Development</div>
+    <h2 class="section-title">Certifications & <em>Learning</em></h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">💵</div>
+        <div class="cert-name">Foundations of Working Capital Management</div>
+        <div class="cert-org">Professional Certification</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🔗</div>
+        <div class="cert-name">Digital Transformation in Supply Chains</div>
+        <div class="cert-org">Professional Certification</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📦</div>
+        <div class="cert-name">Inventory Management Foundations</div>
+        <div class="cert-org">Professional Certification</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏃</div>
+        <div class="cert-name">Build Your Team's Agility and Resilience</div>
+        <div class="cert-org">Professional Certification</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⚡</div>
+        <div class="cert-name">Lean Six Sigma Foundation</div>
+        <div class="cert-org">Professional Certification</div>
+      </div>
+      <div class="cert-card" style="background: var(--navy); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; border-top-color:var(--teal2);">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:32px; color:var(--gold); margin-bottom:8px;">S1</div>
+        <div class="cert-name" style="color:var(--white);">Business Management</div>
+        <div class="cert-org" style="color:var(--muted);">Universitas Widyatama · 2018–2022</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ CONTACT ══════════ -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--gold); justify-content:center;">Let's Connect</div>
+    <h2 class="section-title" style="text-align:center;">Open to <em>Conversations</em></h2>
+    <p class="contact-subtitle">Whether it's a strategic logistics challenge, a leadership opportunity, or a professional collaboration — I'm always open to a meaningful conversation.</p>
+    <div class="contact-links">
+      <a href="tel:+6282121033325" class="contact-link">
+        <span class="contact-link-icon">📞</span>
+        <span>+62 821-2103-3325</span>
+      </a>
+      <a href="mailto:nuzul_nur@outlook.com" class="contact-link">
+        <span class="contact-link-icon">✉️</span>
+        <span>nuzul_nur@outlook.com</span>
+      </a>
+      <a href="https://www.linkedin.com/in/nujul" target="_blank" class="contact-link">
+        <span class="contact-link-icon">💼</span>
+        <span>linkedin.com/in/nujul</span>
+      </a>
+      <a href="#" class="contact-link">
+        <span class="contact-link-icon">📍</span>
+        <span>Bali / Jakarta, Indonesia</span>
+      </a>
+    </div>
+    <div class="contact-divider"></div>
+    <p class="footer-note">© 2025 Nujul Nur Manajil Fiqri · Logistics & Supply Chain Leader · Indonesia</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ SCRIPTS ══════════ -->
+<script>
+// ── Intersection observer for reveal animations ───────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal, .tl-item, .comp-card, .cert-card, .stat-item').forEach(el => {
+  observer.observe(el);
+});
+
+// ── Counter animation ──────────────────────────────────────────────
+function animateCounter(el, target, duration = 1600) {
+  let start = 0;
+  const step = target / (duration / 16);
+  const timer = setInterval(() => {
+    start += step;
+    if (start >= target) { el.textContent = target; clearInterval(timer); return; }
+    el.textContent = Math.floor(start);
+  }, 16);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.count').forEach(el => {
+        animateCounter(el, parseInt(el.dataset.target));
+      });
+      counterObserver.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+
+const statsSection = document.getElementById('stats');
+if (statsSection) counterObserver.observe(statsSection);
+
+// ── Active nav highlight on scroll ────────────────────────────────
+const sections = document.querySelectorAll('section[id], div[id="stats"]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--gold)' : '';
+  });
+});
+
+// ── Stagger tl-items ──────────────────────────────────────────────
+const tlObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      tlObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.05 });
+document.querySelectorAll('.tl-item').forEach(el => tlObserver.observe(el));
+</script>
+</body>
+</html>
